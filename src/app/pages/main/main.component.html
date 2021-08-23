@@ -1,0 +1,22 @@
+
+<js-header (toogleSidebarEvent)="sidebarToggle($event)"></js-header>
+
+
+<mat-drawer-container>
+  <mat-drawer  #drawer mode="side" [opened]="sidebarOpened">
+
+    <js-sidebar></js-sidebar>
+
+  </mat-drawer>
+
+
+  <mat-drawer-content>
+
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+<!--
+<js-footer></js-footer> -->

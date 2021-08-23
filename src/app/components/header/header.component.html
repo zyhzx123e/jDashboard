@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="triggerToggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Covid live data</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row"  >
+        <li style="display: flex;text-align: right;margin-right: 0 !important;">
+          <span style="margin-top:auto;margin-left:auto;font-size:0.8em;">{{user}}</span>
+        </li>
+
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu  #menu="matMenu">
+            <button (click)="exitApp()" mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Sign out
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

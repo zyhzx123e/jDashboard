@@ -1,0 +1,16 @@
+<mat-nav-list>
+  <div class="profile-card">
+
+    <button style="margin: auto;" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <div class="header"  style="margin: auto;" >
+      <h2>{{maintitle}}</h2>
+      <h4>{{subtitle}}</h4>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader>Filters</h2>
+  <a mat-list-item  (click)="filter(0)"  >Last 6 month</a>
+  <a mat-list-item  (click)="filter(1)" >Past 6 days</a>
+</mat-nav-list>

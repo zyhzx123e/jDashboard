@@ -1,0 +1,46 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card *ngIf="!isRegister" style="border-radius: 16px;" class="box">
+    <mat-card-header>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+        <div class="mat-form-field-infix">
+          <input matInput [(ngModel)]="login_uname" name="Username" placeholder="Username">
+        </div>
+
+        <div class="mat-form-field-infix">
+          <input matInput [(ngModel)]="login_pswd" name="Password" type="password" placeholder="Password">
+        </div>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" style="color: royalblue;" (click)="login()" class="btn-block">Log in</button>
+      <div style="display: flex; padding: 10px;"><span  (click)="register()" style="width: 100%;text-align: center;margin: auto;text-decoration: underline;color:yellowgreen;">{{registerLink}}</span></div>
+    </form>
+  </mat-card>
+
+
+  <mat-card *ngIf="isRegister" style="border-radius: 16px;" class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+        <div class="mat-form-field-infix">
+          <input matInput [(ngModel)]="register_uname" name="Username" placeholder="Username">
+        </div>
+
+        <div class="mat-form-field-infix">
+          <input matInput [(ngModel)]="register_pwd" type="password" name="Password" placeholder="Password">
+        </div>
+        <div class="mat-form-field-infix">
+          <input matInput [(ngModel)]="register_pwd_retype" type="password" name="Retype Password" placeholder="Retype Password">
+        </div>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" style="color:brown;" (click)="SignUp()" class="btn-block">Register</button>
+      <div style="display: flex; padding: 10px;"><span  (click)="register()" style="width: 100%;text-align: center;margin: auto;text-decoration: underline;color:yellowgreen;">{{'Go to login'}}</span></div>
+    </form>
+  </mat-card>
+</div>
